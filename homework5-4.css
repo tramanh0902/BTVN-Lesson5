@@ -1,0 +1,51 @@
+#instruction {
+    margin-top: 30px;
+}
+
+#instruction h1 {
+    text-align: center;
+    color: white;
+}
+
+body {
+    padding: 100px;
+    background-color: tomato !important;
+}
+
+.calculate-box {
+    width: 500px;
+    background-color: white;
+    margin-left: calc((100% - 500px) / 2);
+    padding: 1em;
+    font-family: system-ui;
+    border-radius: 0.3em;
+}
+
+.title,
+.submit-button {
+    margin-top: .5em;
+    margin-bottom: .5em;
+    font-size: large;
+}
+
+input {
+    width: 100%;
+    background-color: lavender;
+    padding: .5em;
+    border-radius: .2em;
+    border: 0px;
+}
+
+.submit-button {
+    background-color: #2e7d32;
+    color: white;
+}
+
+.additional-text {
+    text-align: center;
+}
+
+.additional-text a {
+    color: blue;
+    text-decoration: underline;
+}
