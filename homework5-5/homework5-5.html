@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="homework5-5.css">
+    <script src="homework5-5.js"></script>
+    <title>My homework 5-5</title>
+</head>
+
+<body>
+    <div class="header col-sm-12">
+        <div class="search-box">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Type something to search...">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">Search</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="left-sidebar col-sm-3">
+            <div class="list-group action-list" id="sidebar">
+                <a href="#" class="list-group-item list-group-item-action active" id="1" ondblclick="deleteItem(1)">
+                    Product list
+                </a>
+                <a href="#" class="list-group-item list-group-item-action" id="2" ondblclick="deleteItem(2)">Category</a>
+                <a href="#" class="list-group-item list-group-item-action" id="3" ondblclick="deleteItem(3)">News</a>
+                <a href="#" class="list-group-item list-group-item-action" id="4" ondblclick="deleteItem(4)">Membership</a>
+                <a href="#" class="list-group-item list-group-item-action" id="5" ondblclick="deleteItem(5)">Ordered product</a>
+
+            </div>
+            <div class="adding-list-item list-group-item" id="sidebar-adding-box">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="New item..." name="adding-item">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" onclick="addItem()">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-page col-sm-9">
+            <div class="card-row">
+                <div class="card-box">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://i0.wp.com/blog.bumsonthesaddle.com/wp-content/uploads/2019/09/Blog-Headers-_ALL_-7-1-1.jpg?fit=1024%2C536&ssl=1" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">MERIDA BIKES</h5>
+                            <p class="card-text">Merida là một thương hiệu rất nổi tiếng về xe đạp leo núi và trông rất phong cách.</p>
+                            <div class="dropdown color-select">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Choose color
+                            </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Black</a>
+                                    <a class="dropdown-item" href="#">White</a>
+                                    <a class="dropdown-item" href="#">Gold</a>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary disabled">Order</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card-box">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ2-gAx-vEscx3VmEQNjbK9P1SNvFDRwHkNg&usqp=CAU" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">TREK BIKES</h5>
+                            <p class="card-text">Trek được xem là công ty dẫn đầu và lớn nhất về xe đạp và các sản phẩm phụ kiện xe đạp trên toàn thế giới.</p>
+                            <div class="dropdown color-select">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Choose color
+                            </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Black</a>
+                                    <a class="dropdown-item" href="#">White</a>
+                                    <a class="dropdown-item" href="#">Gold</a>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary disabled">Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://images.immediate.co.uk/production/volatile/sites/21/2020/06/Specialized-Epic-Hardtail-01-b661e33.jpg?quality=90&resize=620,413" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">SPECIALIZED BIKES</h5>
+                            <p class="card-text">Specialized cũng là một trong những thương hiệu tốt và nổi tiếng nhất về xe đạp trên thế giới.</p>
+                            <div class="dropdown color-select">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Choose color
+                            </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Black</a>
+                                    <a class="dropdown-item" href="#">White</a>
+                                    <a class="dropdown-item" href="#">Gold</a>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary disabled">Order</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-row">
+                <div class="card-box">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbcWIjLu0utyioL4Aq7FyyeDadV1bEb4JJ620ItMgeAvZorHnVWq7rFTnhbOvBeFbkxzY&usqp=CAU" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">CANNONDALE BIKES</h5>
+                            <p class="card-text">Cannondale là thương hiệu xe đạp nổi tiếng và thành công của Canada.</p>
+                            <div class="dropdown color-select">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Choose color
+                            </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Black</a>
+                                    <a class="dropdown-item" href="#">White</a>
+                                    <a class="dropdown-item" href="#">Gold</a>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary disabled">Order</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card-box">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY43_3YAt_PB1D9ynxvUmLIhj5xKl_QFjifA&usqp=CAU" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">KONA BIKES</h5>
+                            <p class="card-text">Kona là một thương hiệu xe đạp rất nổi tiếng trên thế giới. Nó cơ bản là một thương hiệu của Bắc Mỹ và bắt đầu sản xuất vào năm 1988. </p>
+                            <div class="dropdown color-select">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Choose color
+                            </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Black</a>
+                                    <a class="dropdown-item" href="#">White</a>
+                                    <a class="dropdown-item" href="#">Gold</a>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary disabled">Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://www.scott-japan.com/files/libs/24404/202108101320039035.jpg?1628569205" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">SCOTT BIKES</h5>
+                            <p class="card-text">Scott nổi tiếng với xe đạp thể thao và là một thương hiệu được mong muốn trên toàn thế giới. Xe đạp của hãng có thiết kế sành điệu cũng như chất lượng đáng tin cậy. </p>
+                            <div class="dropdown color-select">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Choose color
+                            </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Black</a>
+                                    <a class="dropdown-item" href="#">White</a>
+                                    <a class="dropdown-item" href="#">Gold</a>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary disabled">Order</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-row">
+                <div class="card-box">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Yltb2EZqzKm_aXjJ7euri_JukZUCbfn3yQ&usqp=CAU" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">SANTA CRUZ BIKES</h5>
+                            <p class="card-text">Santa Cruz là thương hiệu xe đạp rất nổi tiếng trên thế giới cho dòng xe đạp cao cấp. Công ty này là một thương hiệu đến từ California. </p>
+                            <div class="dropdown color-select">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Choose color
+                            </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Black</a>
+                                    <a class="dropdown-item" href="#">White</a>
+                                    <a class="dropdown-item" href="#">Gold</a>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary disabled">Order</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card-box">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV55Japp-GO-UNRKnb2W_bza9mMys_W88SRA&usqp=CAU" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">MARIN BIKES</h5>
+                            <p class="card-text">Marin là một trong những thương hiệu xe đạp nổi tiếng nhất và tốt nhất trên thế giới. Công ty bắt đầu làm việc trong lĩnh vực này vào năm 1986 bởi Bob Buckley tại California.</p>
+                            <div class="dropdown color-select">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Choose color
+                            </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Black</a>
+                                    <a class="dropdown-item" href="#">White</a>
+                                    <a class="dropdown-item" href="#">Gold</a>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary disabled">Order</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer col-sm-12">
+    </div>
+</body>
+
+</html>
